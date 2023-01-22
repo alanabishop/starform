@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #BUTTON-SQUARE
+\*------------------------------------*/
+
+.c-btn--square {
+	height: $ui-button-square-size;
+	width: $ui-button-square-size;
+	min-width: unset;
+	background-color: $color--lightBlue;
+	transition: $transition;
+
+	&:hover {
+		background-color: $color--midBlue;
+	}
+
+	&.is-disabled {
+		background-color: transparent;
+        cursor: unset;
+		border: solid 1px $color--white;
+	}
+}

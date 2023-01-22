@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #TITLE-TEXT-IMAGE
+\*------------------------------------*/
+
+.c-tti {
+    padding-bottom: 90px;
+
+    @include bp(medium) {
+        padding-bottom: $space-xl;
+    }
+}
+
+.c-tti__wrapper {
+    flex-direction: column-reverse;
+    @include bp(medium) {
+        flex-direction: row;
+    }
+}
+
+.c-tti__content {
+    display: inline-flex;
+    flex-direction: column;
+    gap: $space-xs;
+
+	@include bp(medium) {
+		width: 45%;
+	}
+}
+
+.c-tti__image-wrapper {
+	position: relative;
+    padding-bottom: $space-sm;
+	width: 100%;
+
+	@include bp(medium) {
+		width: 50%;
+        padding-bottom: unset;
+	}
+
+	&::before {
+		position: absolute;
+        content: '';
+        display: block;
+		left: 0;
+		right: 0;
+
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 315px 70px 0 0;
+		border-color: $color--darkBlue transparent transparent transparent;
+	}
+}
+
+.c-tti__image {
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #ARROW-LINK
+\*------------------------------------*/
+
+.c-arrow-link {
+    @include t-mono();
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover, &.is-hover {
+        .c-arrow-link__icon {
+            transform: translateX(75%);
+        }
+    }
+}
+
+.c-arrow-link__text {
+    padding-right: 10px;
+}
+
+.c-arrow-link__icon {
+    transition: $transition;
+}

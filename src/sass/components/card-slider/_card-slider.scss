@@ -1,0 +1,93 @@
+/*------------------------------------*\
+    #CARD-SLIDER
+\*------------------------------------*/
+
+.c-card-slider {
+	position: relative;
+	padding-bottom: 160px;
+
+	@include bp(medium) {
+		padding-bottom: 215px;
+	}
+}
+
+.c-card-slider__slider {
+	height: 431px;
+
+	@include bp(small) {
+		height: 500px;
+	}
+
+	@include bp(medium) {
+		height: 573px;
+	}
+
+	.swiper {
+		display: flex;
+		height: 100%;
+		padding-left: $space-xs;
+		padding-right: $space-xs;
+
+		@include bp(medium) {
+			padding-left: $space-sm;
+			padding-right: $space-sm;
+		}
+
+		@include bp(large) {
+			padding-right: $space-lg;
+			padding-left: $space-lg;
+		}
+	}
+}
+
+.c-card-slider__title {
+	padding-bottom: 30px;
+
+	@include bp(medium) {
+		padding-bottom: $space-md;
+	}
+}
+
+.c-card-slider__components {
+	position: absolute;
+	bottom: 60px;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+
+	@include bp(medium) {
+		bottom: 100px;
+	}
+}
+
+
+.c-card-slider__prev {
+	margin-right: 10px;
+}
+
+.c-card-slider__arrow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 11px;
+	transition: $transition;
+}
+
+.c-card-slider__prev-arrow {
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+
+
+.c-card-slider__cirles {
+	display: none;
+
+	@include bp(medium) {
+		display: block;
+		position: absolute;
+		left: -100px;
+		top: 80px;
+
+		transform: rotate(180deg);
+	}
+}

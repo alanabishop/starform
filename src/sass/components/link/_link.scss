@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #LINK
+\*------------------------------------*/
+
+.c-link {
+	font-weight: $font-weight--med;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover, &:active {
+        color: $color--gold;
+    }
+}

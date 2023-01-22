@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+.c-header {
+    position: relative;
+    width: 100%;
+}
+
+.c-header__content {
+    z-index: 6000;
+    position: absolute;
+    width: 100%;
+    height: $ui-header-height-mobile;
+
+    @include bp('medium') {
+        height: $ui-header-height;
+    }
+}
+
+.c-header__logo {
+    width: 108px;
+    height: 18px;
+
+    @include bp('medium') {
+        width: 174px;
+        height: 29px;
+    }
+}

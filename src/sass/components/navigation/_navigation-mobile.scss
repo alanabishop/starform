@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #NAVIGATION-MOBILE
+\*------------------------------------*/
+
+.c-navigation--mobile {
+    display: flex;
+    flex-direction: column;
+
+    .c-navigation__item {
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+
+    .c-navigation__link {
+        @include  t-sm() ;
+    }
+}

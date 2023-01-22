@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #COLOR
+\*------------------------------------*/
+
+$colors: (
+	"white" $color--white,
+	"black" $color--black,
+	"gold" $color--gold,
+	"dark-blue" $color--darkBlue,
+	"light-blue" $color--lightBlue,
+	"rich-black" $color--richBlack,
+	"green" $color--green,
+	"orange" $color--orange
+);
+
+@each $color in $colors {
+	$name: nth($color, 1);
+	$color: nth($color, 2);
+
+	.t-color-#{$name} {
+		color: $color;
+	}
+
+	.bg-color-#{$name} {
+		background-color: $color;
+	}
+}

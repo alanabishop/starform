@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
+body {
+    background-color: $color--darkBlue;
+    color: $color--white;
+
+    font-family: $primary-font;
+    font-weight: $font-weight--reg;
+
+    &.has-active-mobile-pane {
+        overflow: hidden;
+      }
+}

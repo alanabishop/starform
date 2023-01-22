@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    #FULL-WIDTH-SLIDER
+\*------------------------------------*/
+
+.c-full-width-slider {
+	position: relative;
+	height: 100vh;
+
+	.swiper {
+		height: 100vh;
+	}
+}
+
+.c-full-width-slider__components {
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+
+	@include bp(medium) {
+		bottom: 100px;
+	}
+}
+
+.c-full-width-slider__btn {
+	position: relative;
+	display: block;
+	width: 36px;
+	height: 36px;
+
+	border: solid 1px $color--white;
+	border-radius: 50%;
+
+	cursor: pointer;
+	transition: $transition;
+
+	&:hover {
+		transform: scale(1.2);
+		border-color: $color--gold;
+	}
+
+	&.is-disabled {
+		&:hover {
+			transform: none;
+			cursor: unset;
+			border-color: $color--white;
+		}
+	}
+}
+
+.c-full-width-slider__arrow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.c-full-width-slider__prev-arrow {
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.c-full-width-slider__pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: fit-content;
+	height: 50px;
+
+	padding: {
+		left: 15px;
+		right: 15px;
+	}
+}
+
+.c-full-width-slider__pagination-bullet {
+	position: relative;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background-color: transparent;
+	cursor: pointer;
+
+	border-radius: 50%;
+	border: solid 1px rgba($color--white, 0.4);
+
+	transition: $transition;
+
+	&.swiper-pagination-bullet-active {
+		background-color: $color--gold;
+
+		width: 8px;
+		height: 8px;
+		border: none;
+
+		&::after {
+			position: absolute;
+			content: "";
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			width: 14px;
+			height: 14px;
+
+			background-color: transparent;
+
+			border: solid 1px $color--gold;
+
+			border-radius: 50%;
+		}
+	}
+
+	&:hover {
+		transform: scale(1.2);
+		background-color: $color--gold;
+		border: none;
+	}
+}

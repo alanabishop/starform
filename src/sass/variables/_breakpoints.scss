@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+
+$breakpoints: (
+    small       : (60em * .625),
+    medium      : (90em * .625),
+    large       : (120em * .625),
+    x-large     : (180em * .625),
+);
+
+
+@mixin bp($bp-breakpoint, $bp-breakpoints: $breakpoints) {
+    @if map-has-key($bp-breakpoints, $bp-breakpoint) {
+        $bp-breakpoint: map-get($bp-breakpoints, $bp-breakpoint);
+    }
+
+    @media screen and (min-width: #{$bp-breakpoint}) {
+        @content;
+    }
+}
+

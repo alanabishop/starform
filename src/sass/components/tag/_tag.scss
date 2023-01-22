@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #TAG
+\*------------------------------------*/
+
+.c-tag{
+    height: 33px;
+    padding: 0 15px;
+    border-radius: 70px;
+}
+
+.c-tag__text {
+    line-height: 33px;
+
+    @include t-xs();
+}

@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #FLEX
+\*------------------------------------*/
+
+$flexProperties: (
+	center,
+	flex-start,
+    flex-end,
+	space-between,
+	space-around,
+);
+
+
+.d-flex {
+    display: flex;
+	flex-wrap: wrap;
+}
+
+@each $property in $flexProperties {
+	$prop: nth($property, 1);
+
+	.d-flex--align-#{$prop} {
+		align-items: $prop;
+	}
+
+	.d-flex--justify-#{$prop} {
+		justify-content: $prop;
+	}
+}

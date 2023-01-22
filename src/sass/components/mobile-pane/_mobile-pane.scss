@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #MOBILE-PANE
+\*------------------------------------*/
+
+.c-mobile-pane {
+	position: fixed;
+	top:  0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+    background-color: $color--darkBlue;
+
+	visibility: hidden;
+	pointer-events: none;
+
+	transform: translateX(100%);
+	transform-origin: left;
+
+    z-index: 5000;
+
+	transition:$transition-slow;
+	transition-delay: 0.2s;
+
+    .mobile-pane-is-active & {
+        transform: translateX(0);
+        visibility: visible;
+		position: fixed;
+    }
+}
+
+.c-mobile-pane__navigation {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	padding-top: $ui-header-height-mobile + $space-xs;
+
+	@include bp('medium') {
+		padding-top:$ui-header-height + $space-xs;
+	}
+}

@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #LINK-DISABLED
+\*------------------------------------*/
+
+.c-link--disabled {
+    color: $color--silver;
+    cursor: funset;
+
+    &:hover, &:active {
+        color: $color--silver;
+    }
+}

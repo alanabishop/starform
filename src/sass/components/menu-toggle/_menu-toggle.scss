@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    #MENU-TOGGLE
+\*------------------------------------*/
+
+.c-menu-toggle {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+
+	cursor: pointer;
+
+	height: 50px;
+
+	@include bp("large") {
+		display: none;
+	}
+
+	&.is-active {
+		.c-menu-toggle__middle {
+			opacity: 0;
+		}
+
+		.c-menu-toggle__top,
+		.c-menu-toggle__bottom {
+			top: 0;
+			transition-delay: 0s, 0s, 0.25s, 0.25s;
+		}
+
+		.c-menu-toggle__top {
+			transform: rotate(45deg);
+		}
+		.c-menu-toggle__bottom {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.c-menu-toggle__icon {
+	display: block;
+
+	position: relative;
+
+	width: 23px;
+
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	margin: auto;
+
+	transition: {
+		duration: 0.25s;
+		delay: 0s;
+	}
+}
+
+.c-menu-toggle__line {
+	position: absolute;
+
+	right: 0;
+
+	height: 3px;
+	width: 23px;
+
+	background-color: $color--white;
+
+	transition: 0.2s ease-in-out;
+}
+
+.c-menu-toggle__top {
+	top: -8px;
+	background-color: $color--gold;
+	z-index: 1;
+}
+
+.c-menu-toggle__middle {
+	top: 0px;
+
+	transition: {
+		property: opacity;
+		duration: 0.25s;
+		delay: 0s;
+	}
+}
+
+.c-menu-toggle__bottom {
+	top: 8px;
+}
+
+.c-menu-toggle__top,
+.c-menu-toggle__bottom {
+	transform: rotate(0deg);
+
+	transition: {
+		property: top, bottom, transform;
+		duration: 0.25s, 0.25s, 0.25s, 0.25s;
+		delay: 0.25s, 0.25s, 0s, 0s;
+	}
+}
+
+.c-menu-toggle__wrapper {
+	display: none;
+	justify-content: flex-end;
+
+	position: absolute;
+	right: 0;
+
+	&.is-active {
+		display: flex;
+	}
+}

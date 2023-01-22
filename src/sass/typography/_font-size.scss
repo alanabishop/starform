@@ -1,0 +1,93 @@
+/*------------------------------------*\
+    #FONT-SIZE
+\*------------------------------------*/
+
+//Headings
+
+@mixin t-xxl() {
+	font-size: 50px;
+	line-height: 1;
+	letter-spacing: -1px;
+
+	@include bp(medium) {
+		font-size: 100px;
+		line-height: 1.25;
+		letter-spacing: -3px;
+	}
+}
+
+@mixin t-xl() {
+	font-size: 30px;
+	line-height: 1.4;
+
+	@include bp(medium) {
+		font-size: 50px;
+		line-height: 1.25;
+		letter-spacing: -1px;
+	}
+}
+
+@mixin t-lg() {
+	font-size: 25px;
+	line-height: 1.5;
+
+	@include bp(medium) {
+		font-size: 40px;
+		line-height: 1.5;
+	}
+}
+
+@mixin t-md() {
+	font-size: 22px;
+	line-height: 1.37;
+	letter-spacing: 2px;
+
+	@include bp(medium) {
+		font-size: 30px;
+		line-height: 1.37;
+		letter-spacing: 3px;
+	}
+}
+
+@mixin t-sm() {
+	font-size: 20px;
+	line-height: 1.45;
+
+	@include bp(medium) {
+		font-size: 24px;
+		line-height: 1.2;
+	}
+}
+
+@mixin t-xs() {
+	font-size: 12px;
+	letter-spacing: 3.6px;
+}
+
+//Body
+
+@mixin t-body() {
+	font-size: 16px;
+	line-height: 1.875;
+}
+
+@mixin t-body-large() {
+	font-size: 18px;
+	line-height: 1.5;
+
+	@include bp(medium) {
+		font-size: 20px;
+		line-height: 1.75;
+	}
+}
+
+@mixin t-mono() {
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: 4.2px;
+
+	@include bp(medium) {
+		font-size: 16px;
+		letter-spacing: 4.8px;
+	}
+}

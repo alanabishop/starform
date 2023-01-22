@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    Wrappers
+\*------------------------------------*/
+
+.content-wrapper {
+    padding: {
+        left: $space-xs;
+        right: $space-xs;
+    }
+
+	@include bp(medium) {
+		padding: {
+            left: $space-sm;
+            right: $space-sm;
+        }
+	}
+
+    @include bp(large) {
+		padding: {
+            left: $space-lg;
+            right: $space-lg;
+        }
+	}
+}

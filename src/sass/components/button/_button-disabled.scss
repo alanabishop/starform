@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #BUTTON-DISABLED
+\*------------------------------------*/
+
+.c-btn--disabled, .c-btn[disabled] {
+  background: linear-gradient(315deg, transparent 15px, $color--silver 0px);
+  cursor: unset;
+
+  &:hover {
+    background: linear-gradient(315deg, transparent 15px, $color--silver 0px);
+  }
+}

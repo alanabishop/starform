@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    #FEATURED-TEXT
+\*------------------------------------*/
+
+.c-featured-text {
+	position: relative;
+	width: 100%;
+	padding: $space-sm 0 $space-xl;
+
+	@include bp(medium) {
+		padding: $space-md 0 160px;
+	}
+}
+
+.c-featured-text__wrapper {
+	@include bp(medium) {
+		width: 90%;
+	}
+}
+
+.c-featured-text__subtitle {
+	width: 100%;
+	margin-bottom: $space-xs;
+
+	@include bp(medium) {
+		width: 33.33%;
+	}
+
+	@include bp(large) {
+		width: 25%;
+	}
+}
+
+.c-featured-text__content {
+	width: 100%;
+
+	@include bp(medium) {
+		width: 66.66%;
+	}
+
+	@include bp(large) {
+		width: 75%;
+	}
+}
+
+.c-featured-text__copy {
+	@include t-lg();
+	padding-bottom: 40px;
+
+	@include bp(large) {
+		padding-bottom: $space-md;
+	}
+}
+
+.c-featured-text__circles {
+	position: absolute;
+	right: 0;
+	bottom: -10%;
+	z-index: -1;
+
+    width: 160px;
+    height: 160px;
+
+	@include bp(medium) {
+		width: 300px;
+		height: 300px;
+	}
+
+    @include bp(large) {
+		bottom: -40%;
+
+		width: 420px;
+		height: 420px;
+	}
+}

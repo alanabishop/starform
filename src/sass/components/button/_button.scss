@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+.c-btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	align-self: flex-start;
+
+	border: none;
+	outline: none;
+
+	min-height: $ui-button-height;
+	min-width: $ui-button-width;
+	padding: 0 20px;
+
+	color: $color--white;
+
+	cursor: pointer;
+}

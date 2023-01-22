@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #COLOR
+\*------------------------------------*/
+
+.t-bold {
+    font-weight: 500;
+}
+
+.t-mono {
+    text-transform: uppercase;
+    @include t-mono();
+}
