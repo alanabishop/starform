@@ -13,6 +13,7 @@ import FullWidthSlider from "./components/FullWidthSlider";
 import Marquee from "./components/Marquee";
 import { CardSlider } from "./components/CardSlider";
 import Card from "./components/Card";
+import Cta from "./components/Cta";
 
 function App() {
 	return (
@@ -44,13 +45,13 @@ function App() {
 			<FullWidthSlider />
 			<Marquee subtitle={"Partnerships"} />
 			<CardSlider title={"Media"} />
-			{/* <Card
-				tag={"Events"}
-				imageSrc={ttiImage}
-				date={"24/02/2022"}
-				title={"Convene an International Partnership for development."}
-				subtitle={"Helping nations achieve Net Zero and creating new commercial opportunities"}
-			/> */}
+			<Cta
+				subtitle={"Get In Touch"}
+				title={
+					"Help us get one step closer to Net Zero Star-Based Solar Power."
+				}
+				buttonText={"Contact us"}
+			/>
 		</div>
 	);
 }

@@ -4,7 +4,9 @@ import "swiper/css";
 import { Navigation } from "swiper";
 
 //Assets
-import ttiImage from "../assets/tti.jpg";
+import cardSlider1 from "../assets/card-slider-1.jpg";
+import cardSlider2 from "../assets/card-slider-2.jpg";
+import cardSlider3 from "../assets/card-slider-3.jpg";
 
 //Components
 import Card from "./Card";
@@ -12,6 +14,49 @@ import AnimatedCircles from "./AnimatedCircles";
 
 export const CardSlider = ({ title }) => {
 	const [screenWidth] = useState(window.innerWidth);
+
+	const cardContent = [
+		{
+			tag: "Events",
+			imageSrc: cardSlider1,
+			date: "24/02/2022",
+			title: "Convene an International Partnership for development.",
+			subtitle:
+				"Helping nations achieve Net Zero and creating new commercial opportunities",
+		},
+		{
+			tag: "Resources",
+			imageSrc: cardSlider2,
+			date: "24/02/2022",
+			title: "Convene an International Partnership for development.",
+			subtitle:
+				"Helping nations achieve Net Zero and creating new commercial opportunities",
+		},
+		{
+			tag: "News",
+			imageSrc: cardSlider3,
+			date: "24/02/2022",
+			title: "Convene an International Partnership for development.",
+			subtitle:
+				"Helping nations achieve Net Zero and creating new commercial opportunities",
+		},
+		{
+			tag: "News",
+			imageSrc: cardSlider1,
+			date: "24/02/2022",
+			title: "Convene an International Partnership for development.",
+			subtitle:
+				"Helping nations achieve Net Zero and creating new commercial opportunities",
+		},
+		{
+			tag: "Events",
+			imageSrc: cardSlider2,
+			date: "24/02/2022",
+			title: "Convene an International Partnership for development.",
+			subtitle:
+				"Helping nations achieve Net Zero and creating new commercial opportunities",
+		},
+	];
 
 	return (
 		<div className="c-card-slider">
@@ -33,50 +78,18 @@ export const CardSlider = ({ title }) => {
 						disabledClass: "is-disabled",
 					}}
 				>
-					<SwiperSlide className="c-card-slider__slide">
-						<Card
-							tag={"Events"}
-							imageSrc={ttiImage}
-							date={"24/02/2022"}
-							title={"Convene an International Partnership for development."}
-							subtitle={
-								"Helping nations achieve Net Zero and creating new commercial opportunities"
-							}
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="c-card-slider__slide">
-						<Card
-							tag={"Resources"}
-							imageSrc={ttiImage}
-							date={"24/02/2022"}
-							title={"Convene an International Partnership for development."}
-							subtitle={
-								"Helping nations achieve Net Zero and creating new commercial opportunities"
-							}
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="c-card-slider__slide">
-						<Card
-							tag={"News"}
-							imageSrc={ttiImage}
-							date={"24/02/2022"}
-							title={"Convene an International Partnership for development."}
-							subtitle={
-								"Helping nations achieve Net Zero and creating new commercial opportunities"
-							}
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="c-card-slider__slide">
-						<Card
-							tag={"News"}
-							imageSrc={ttiImage}
-							date={"24/02/2022"}
-							title={"Convene an International Partnership for development."}
-							subtitle={
-								"Helping nations achieve Net Zero and creating new commercial opportunities"
-							}
-						/>
-					</SwiperSlide>
+					{cardContent &&
+						cardContent.map(({ tag, imageSrc, date, title, subtitle }) => (
+							<SwiperSlide className="c-card-slider__slide">
+								<Card
+									tag={tag}
+									imageSrc={imageSrc}
+									date={date}
+									title={title}
+									subtitle={subtitle}
+								/>
+							</SwiperSlide>
+						))}
 				</Swiper>
 			</div>
 
