@@ -20,7 +20,7 @@ export const Hero = ({ title, subtitle, featuredText }) => {
 			<div className="c-hero__gradient"></div>
 			<div className="c-hero__content content-wrapper">
 				{title && <h1 className="c-hero__title">{title}</h1>}
-				<p className="c-hero__subtitle">
+				<p className="c-hero__subtitle w-5-col">
 					{subtitle && subtitle}
 					{featuredText && <span className="t-color-gold">{featuredText}</span>}
 				</p>

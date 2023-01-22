@@ -12,13 +12,17 @@ import TitleTextImage from "./components/TitleTextImage";
 import FullWidthSlider from "./components/FullWidthSlider";
 import Marquee from "./components/Marquee";
 import { CardSlider } from "./components/CardSlider";
-import Card from "./components/Card";
 import Cta from "./components/Cta";
+import Footer from "./components/Footer";
+
+//Utils
+import { Grid } from "./utils/Grid";
 
 function App() {
 	return (
 		<div className="App">
 			<Header />
+			<Grid/>
 			<Hero
 				title={"Welcome to StarForm"}
 				subtitle={"Helping nations achieve "}
@@ -52,6 +56,7 @@ function App() {
 				}
 				buttonText={"Contact us"}
 			/>
+			<Footer />
 		</div>
 	);
 }

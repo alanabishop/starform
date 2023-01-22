@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #FEOOTER
+\*------------------------------------*/
+
+.c-footer {
+    background-color: $color--richBlack;
+    padding: {
+        top: $space-md;
+        bottom:$space-md;
+    }
+}
+
+.c-footer__logo {
+    width: 16.667%;
+}
+
+.test {
+    width: 83.33%;
+    // height: 10px;
+}

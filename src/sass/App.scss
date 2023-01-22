@@ -22,7 +22,9 @@
 @import "./utils/color";
 @import "./utils/font";
 @import "./utils/flex";
+@import "./utils/size";
 @import "./utils/wrapper";
+@import "./utils/grid";
 
 //Components
 
@@ -41,6 +43,8 @@
 @import "./components/cta/cta";
 
 @import "./components/featured-text/featured-text";
+
+@import "./components/footer/footer";
 
 @import "./components/full-width-slide/full-width-slide";
 

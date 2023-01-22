@@ -41,12 +41,11 @@
 }
 
 .c-hero__title {
-    max-width: 80%;
+    max-width: 75%;
     padding-bottom: $space-xs;
 }
 
 .c-hero__subtitle {
-    max-width: 80%;
     @include t-body-large();
 }
 

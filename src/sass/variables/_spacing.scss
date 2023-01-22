@@ -2,13 +2,6 @@
     SPACING
 \*------------------------------------*/
 
-//Padding
-$col-pd-wrapper: 0 0.8rem;
-$col-pd-inner: 0 0.8rem;
-
-$col-pd-wrapper-small: 0 0.4rem;
-$col-pd-inner-small: 0 0.4rem;
-
 //Spacing
 $space-xxs: 10px;
 $space-xs: 20px;
@@ -20,3 +13,13 @@ $space-xxl: 140px;
 $space-xxxl: 170px;
 $space-xxxxl: 190px;
 $space-xxxxxl: 260px;
+
+
+//Padding
+$col-pd-wrapper-small: $space-xs;
+$col-pd-wrapper: $space-sm ;
+$col-pd-wrapper-large: $space-lg;
+
+
+$col-pd-inner: 10px;
+$col-pd-inner-small: 4px;

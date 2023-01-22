@@ -37,8 +37,8 @@ export const Header = () => {
 	const toggle = () => setMobilePaneActive(!mobilePaneActive);
 
 	useEffect(() => {
-		document.body.classList.toggle('mobile-pane-is-active', mobilePaneActive);
-	  },[mobilePaneActive])
+		document.body.classList.toggle("mobile-pane-is-active", mobilePaneActive);
+	}, [mobilePaneActive]);
 
 	useEffect(() => {
 		const handleResize = () => setMobilePaneActive(false);
@@ -48,11 +48,13 @@ export const Header = () => {
 		};
 	}, []);
 
-
 	return (
 		<header className="c-header">
-				<div className="c-header__content d-flex d-flex--align-center d-flex--justify-space-between
-				content-wrapper">
+			<div
+				className="c-header__content
+				content-wrapper"
+			>
+				<div className="content-inner d-flex d-flex--align-center d-flex--justify-space-between h-100">
 					<div className="c-header__logo">
 						<Logo />
 					</div>
@@ -61,8 +63,9 @@ export const Header = () => {
 					</div>
 					<MenuToggle toggle={toggle} isOpen={mobilePaneActive} />
 				</div>
+			</div>
 
-				<MobilePane links={navigationLinks} />
+			<MobilePane links={navigationLinks} />
 		</header>
 	);
 };

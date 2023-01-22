@@ -12,35 +12,9 @@
 	}
 }
 
-.c-featured-text__wrapper {
-	@include bp(medium) {
-		width: 90%;
-	}
-}
-
 .c-featured-text__subtitle {
 	width: 100%;
 	margin-bottom: $space-xs;
-
-	@include bp(medium) {
-		width: 33.33%;
-	}
-
-	@include bp(large) {
-		width: 25%;
-	}
-}
-
-.c-featured-text__content {
-	width: 100%;
-
-	@include bp(medium) {
-		width: 66.66%;
-	}
-
-	@include bp(large) {
-		width: 75%;
-	}
 }
 
 .c-featured-text__copy {

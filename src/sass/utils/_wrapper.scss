@@ -22,3 +22,17 @@
         }
 	}
 }
+
+    .content-inner {
+        padding: {
+            left: 4px;
+            right: 4px;
+        }
+
+        @include bp(medium) {
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+        }
+    }

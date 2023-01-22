@@ -63,13 +63,13 @@ export const CardSlider = ({ title }) => {
 			<h2 className="content-wrapper c-card-slider__title">{title}</h2>
 			<div className="c-card-slider__slider">
 				<Swiper
-					spaceBetween={screenWidth <= 600 ? 10 : 20}
+					spaceBetween={screenWidth <= 600 ? 8 : 20}
 					slidesPerView={
 						screenWidth <= 600
-							? 1.1
+							? 1
 							: screenWidth > 601 && screenWidth < 900
 							? 2.1
-							: 3.1
+							: 3
 					}
 					modules={[Navigation]}
 					navigation={{
@@ -79,8 +79,9 @@ export const CardSlider = ({ title }) => {
 					}}
 				>
 					{cardContent &&
-						cardContent.map(({ tag, imageSrc, date, title, subtitle }) => (
-							<SwiperSlide className="c-card-slider__slide">
+						cardContent.map(({ tag, imageSrc, date, title, subtitle }, index) => (
+							<SwiperSlide
+							key={title + index} className="c-card-slider__slide content-inner w-4-col">
 								<Card
 									tag={tag}
 									imageSrc={imageSrc}
@@ -94,7 +95,7 @@ export const CardSlider = ({ title }) => {
 			</div>
 
 			<div className="c-card-slider__components content-wrapper">
-				<div className="d-flex d-flex--align-center">
+				<div className="d-flex d-flex--align-center content-inner">
 					<div className="c-card-slider__prev c-btn c-btn--square">
 						<svg
 							className="c-card-slider__prev-arrow c-card-slider__arrow"

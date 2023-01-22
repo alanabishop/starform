@@ -16,8 +16,8 @@ export const FullWidthSlide = ({
 		)}
 		<div className="c-full-width-slide__content d-flex d-flex--align-center d-flex--justify-center ">
 			{subtitle && <span className="t-mono t-color-gold">{subtitle}</span>}
-			{title && <h2>{title}</h2>}
-			{copy && <p>{copy}</p>}
+			{title && <h2 className="content-inner w-10-col">{title}</h2>}
+			{copy && <p className="content-inner w-6-col" >{copy}</p>}
 			{buttonText && (
 				<div className="c-full-width-slide__btn">
 					<Button>{buttonText}</Button>
