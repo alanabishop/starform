@@ -4,17 +4,141 @@
 
 .c-footer {
     background-color: $color--richBlack;
-    padding: {
-        top: $space-md;
-        bottom:$space-md;
+    padding-top: 51px;
+
+    @include bp(medium) {
+        padding-top: 86px;
     }
 }
 
-.c-footer__logo {
-    width: 16.667%;
+.c-footer__logo-container {
+    width: 85px;
+    height: 14px;
+    margin-bottom: 66px;
+
+    @include bp(medium) {
+        width: 132px;
+        height: 22px;
+        margin-bottom: 0;
+    }
 }
 
-.test {
-    width: 83.33%;
-    // height: 10px;
+.c-footer__col {
+    padding-bottom: 50px;
+
+    @include bp(medium) {
+        padding-bottom: 0;
+    }
+}
+
+.c-footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.c-footer__large-link-wrapper{
+    display: inline-block;
+    position: relative;
+
+    &:not(:last-of-type) {
+        padding-bottom: 20px;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+
+        height: 1px;
+        width: 100%;
+        background-color: $color--white;
+
+        transition: $transition;
+        transform-origin: left;
+    }
+
+    &:hover {
+        color: $color--gold;
+
+        &::after {
+            transform: scaleX(0);
+        }
+
+    }
+}
+
+.c-footer__large-link {
+    @include t-md();
+    text-decoration: none;
+}
+
+.c-footer__subtitle {
+    padding-bottom: 25px;
+
+    @include t-xxs();
+
+}
+
+.c-footer__links {
+
+
+}
+
+.c-footer__navigation-links {
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include bp(small) {
+        height: unset;
+    }
+
+
+    @include bp(large) {
+        height: 165px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.c-footer__link {
+    color: $color--offwhite;
+    &:not(:last-of-type) {
+        padding-bottom: 20px;
+    }
+    @include t-xs();
+    transition: $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+        color: $color--gold;
+    }
+
+    height: 20%;
+
+    @include bp(small) {
+        height: unset;
+    }
+
+    @include bp(large) {
+        height: 20%;
+    }
+}
+
+.c-footer__closure {
+    padding-bottom: 30px;
+    padding-top: 40px;
+    gap: 15px;
+
+    @include bp(medium) {
+        padding-top: 60px;
+    }
+}
+
+.c-footer__closure__text {
+    @include t-xxs();
+    letter-spacing: 0;
 }
