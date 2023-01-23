@@ -23,8 +23,8 @@
 	justify-content: center;
 	z-index: 1000;
 
-	@include bp(medium) {
-		bottom: 100px;
+	@include bp(large) {
+		bottom: 120px;
 	}
 }
 

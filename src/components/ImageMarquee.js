@@ -57,10 +57,8 @@ const ImageMarquee = () => {
 	};
 
 	const resizeHandler = () => {
-		marqueeTween.current && marqueeTween.current.pause().kill();
 		gsap.set(marqueeElements.current, { clearProps: "all" });
 		setScreenWidth(window.innerWidth);
-
 	};
 
 	const marqueeElementsRefHandler = (e, i) => {

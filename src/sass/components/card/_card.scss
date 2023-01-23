@@ -8,12 +8,12 @@
 	background-color: black;
     height: 100%;
 
-    padding: 18px;
+    padding: 17px;
 
     cursor: pointer;
 
     @include bp(medium) {
-        padding: 25px 18px 30px;
+        padding: 24px 19px 30px;
     }
 }
 
@@ -74,8 +74,12 @@
 
 .c-card__title {
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     @include t-sm();
+
+    @include bp(medium) {
+        padding-bottom: 20px;
+    }
 }
 
 .c-card__subtitle {

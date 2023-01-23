@@ -43,6 +43,10 @@
 .c-hero__title {
     max-width: 75%;
     padding-bottom: $space-xs;
+
+    @include bp(medium) {
+        padding-bottom: 10px;
+    }
 }
 
 .c-hero__subtitle {
@@ -51,9 +55,13 @@
 
 .c-hero__scroll-down {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     left:50%;
     transform: translateX(-50%);
     z-index: 1;
     cursor: pointer;
+
+    @include bp(medium) {
+        bottom: 100px;
+    }
 }

@@ -7,7 +7,7 @@
 	padding-bottom: 160px;
 
 	@include bp(medium) {
-		padding-bottom: 215px;
+		padding-bottom: 214px;
 	}
 }
 
@@ -44,19 +44,19 @@
 	padding-bottom: 30px;
 
 	@include bp(medium) {
-		padding-bottom: $space-md;
+		padding-bottom: 52px;
 	}
 }
 
 .c-card-slider__components {
 	position: absolute;
-	bottom: 60px;
+	bottom: 80px;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
 
 	@include bp(medium) {
-		bottom: 100px;
+		bottom: 130px;
 	}
 }
 

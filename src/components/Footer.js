@@ -45,7 +45,7 @@ export const Footer = () => {
 					<div className="t-mono c-footer__subtitle">Navigation</div>
 					<div className="c-footer__links c-footer__navigation-links">
 						{navigationLinks.map((link) => (
-							<div className="c-footer__link">{link}</div>
+							<div key={link} className="c-footer__link">{link}</div>
 						))}
 					</div>
 				</div>
@@ -53,7 +53,7 @@ export const Footer = () => {
 					<div className="t-mono c-footer__subtitle">Legal</div>
 					<div className="c-footer__links">
 						{legalLinks.map((link) => (
-							<div className="c-footer__link">{link}</div>
+							<div  key={link} className="c-footer__link">{link}</div>
 						))}
 					</div>
 				</div>

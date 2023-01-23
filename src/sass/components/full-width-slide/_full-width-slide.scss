@@ -3,46 +3,69 @@
 \*------------------------------------*/
 
 .c-full-width-slide {
-    position: relative;
-    height: 100%;
-    text-align: center;
+	position: relative;
+	height: 100%;
+	text-align: center;
 }
 
 .c-full-width-slide__content {
-    height: 100%;
-    flex-direction: column;
-    gap: $space-xs;
+	height: 100%;
+	flex-direction: column;
 
-    @include bp(small) {
-        width: 80%;
-        margin: 0 auto
-    }
+	@include bp(large) {
+		width: 83.33%;
+		margin: 0 auto;
+	}
 }
 
 .c-full-width-slide__bg-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%,-50%);
-    object-fit: cover;
-    z-index: -2;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+	z-index: -2;
 }
 
 .c-full-width-slide__bg-img__gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: calc(100% + 10px);
-    width: 100%;
-    background-image: url(../../../assets/slider-gradient.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100% + 10px);
+	width: 100%;
+	background-image: url(../../../assets/slider-gradient.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
 }
 
-.c-full-width-slide__btn {
-    padding-top: $space-xs;
+.c-full-width-slide__subtitle {
+	padding-bottom: 22px;
+
+	@include bp(medium) {
+		padding-bottom: 32px;
+	}
+}
+
+.c-full-width-slide__title {
+	padding-bottom: 20px;
+
+	@include bp(medium) {
+		padding-bottom: 32px;
+	}
+}
+
+.c-full-width-slide__copy {
+	padding-bottom: 40px;
+
+    @include bp(large) {
+		padding-bottom: 70px;
+	}
+
+	@include bp(x-large) {
+		padding-bottom: 100px;
+	}
 }
