@@ -30,7 +30,7 @@ const ImageMarquee = () => {
 		marqueeInitialSet();
 		marqueeTween.current && marqueeTween.current.pause().kill();
 		marqueeTween.current = gsap.to(marqueeElements.current, {
-			x: `+=${screenWidth * 1.5}`,
+			x: `+=-${screenWidth * 1.5}`,
 			ease: "none",
 			repeat: -1,
 			duration: screenWidth < 900 ? 10 : 20,

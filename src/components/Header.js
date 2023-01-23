@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Logo from "./Logo";
-import MobilePane from "./MenuPane";
+import MobilePane from "./MobilePane";
 import MenuToggle from "./MenuToggle";
 import Navigation from "./Navigation";
 

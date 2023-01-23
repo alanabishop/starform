@@ -40,9 +40,8 @@
 		position: absolute;
         content: '';
         display: block;
-		left: 0;
-		right: 0;
-
+		left: -1;
+		top: -1;
 		width: 0;
 		height: 0;
 		border-style: solid;

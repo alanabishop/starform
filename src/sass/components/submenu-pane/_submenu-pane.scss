@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    #SUBMENU-PANE
+\*------------------------------------*/
+
+.c-submenu-pane {
+	position: fixed;
+	top:  0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+    background-color: $color--darkBlue;
+
+	visibility: hidden;
+
+	transform: translateX(100%);
+	transform-origin: left;
+
+    z-index: 6000;
+
+	transition:$transition-slow;
+	transition-delay: 0.2s;
+
+    .submenu-pane-is-active & {
+        transform: translateX(0);
+        visibility: visible;
+		position: fixed;
+    }
+}
+
+.c-submenu-pane {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	padding-top: $ui-header-height-mobile + $space-xs;
+
+	@include bp('medium') {
+		padding-top:$ui-header-height + $space-xs;
+	}
+}
+
+.c-submenu-pane__navigation-item {
+    display: flex;
+    align-items: center;
+	padding-bottom: 28px;
+}
+
+.c-submenu-pane__navigation-arrow {
+    padding-left: 10px;
+
+	transform: rotate(180deg);
+
+    &:has(+ .c-navigation__link:hover) {
+        transform: translateX(100%);
+    }
+}
+
+.c-submenu-pane__navigation-link {
+	position: relative;
+    transition: $transition;
+    cursor: pointer;
+    z-index: 3000;
+    @include  t-sm();
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+
+        height: 1px;
+        width: 100%;
+        background-color: $color--gold;
+
+        transition: $transition;
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+
+    &:hover {
+        color: $color--gold;
+
+        &::after {
+            transform: scaleX(1);
+        }
+
+    }
+}
