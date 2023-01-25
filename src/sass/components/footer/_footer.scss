@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .c-footer {
+    position: relative;
     background-color: $color--richBlack;
     padding-top: 51px;
 
@@ -17,9 +18,14 @@
     margin-bottom: 66px;
 
     @include bp(medium) {
-        width: 132px;
+        width: 120px;
         height: 22px;
         margin-bottom: 0;
+    }
+
+    @include bp(large) {
+        width: 132px;
+        height: 22px;
     }
 }
 
@@ -80,11 +86,6 @@
 
 }
 
-.c-footer__links {
-
-
-}
-
 .c-footer__navigation-links {
     height: 165px;
     display: flex;
@@ -141,4 +142,33 @@
 .c-footer__closure__text {
     @include t-xxs();
     letter-spacing: 0;
+}
+
+.c-footer__twitter-logo-wrapper {
+    position: absolute;
+    top: 51px;
+    right: 24px;
+
+    @include bp(medium) {
+        top: 86px;
+        right: 60px
+    }
+
+    @include bp(large) {
+        right: 100px;
+    }
+}
+
+.c-footer__twitter-logo {
+    cursor: pointer;
+
+    path {
+        transition: $transition;
+    }
+
+    &:hover {
+        path {
+            fill: $color--gold;
+        }
+    }
 }
