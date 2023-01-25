@@ -17,6 +17,8 @@ export const Hero = ({ title, subtitle, featuredText }) => {
 
 	return (
 		<div className="c-hero">
+			<div className="c-hero__bg"></div>
+			<div className="c-hero__bg-image"></div>
 			<div className="c-hero__gradient"></div>
 			<div className="c-hero__content content-wrapper">
 				{title && <h1 className="c-hero__title">{title}</h1>}
