@@ -20,44 +20,51 @@
 }
 
 .c-animated-circles__line {
-	stroke-dashoffset: 0;
-	animation-iteration-count: infinite;
-	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-duration: 3s;
 	animation-direction: reverse;
 	animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     stroke: transparent;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 
 .c-animated-circles__line-1 {
 	stroke-dasharray: 1150.5;
     animation-delay: 0.1s;
+	stroke-dashoffset: 1150.5;
 }
 
 @keyframes rotate1 {
-	to {
-		stroke-dashoffset: 1150.5;
+	from {
+		opacity: 1;
+		stroke-dashoffset: 0;
 	}
 }
 
 .c-animated-circles__line-2 {
 	stroke-dasharray: 829.6;
     animation-delay: 0.2s;
+	stroke-dashoffset: 829.6;
 }
 
 @keyframes rotate2 {
-	to {
-		stroke-dashoffset: 829.6;
+	from {
+		opacity: 1;
+		stroke-dashoffset: 0;
 	}
 }
 
 
 .c-animated-circles__line-3 {
 	stroke-dasharray: 1479;
+	stroke-dashoffset: 1479;
 }
 
 @keyframes rotate3 {
-	to {
-		stroke-dashoffset: 1479;
+	from {
+		opacity: 1;
+		stroke-dashoffset: 0;
 	}
 }

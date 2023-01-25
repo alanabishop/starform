@@ -7,9 +7,6 @@ import FullWidthSlide from "./FullWidthSlide"
 
 //Assets
 import sliderImage from "../assets/slider.jpg";
-import sliderImage2 from "../assets/card-slider-1.jpg";
-import sliderImage3 from "../assets/card-slider-2.jpg";
-import sliderImage4 from "../assets/card-slider-3.jpg";
 
 export const FullWidthSlider = () => {
 	const sliderContent = [
@@ -27,7 +24,7 @@ export const FullWidthSlider = () => {
 				"Convene an international partnership for development of space based energy.",
 			copy: "The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources.",
 			buttonText: "Business Plan",
-			imageSrc: sliderImage2,
+			imageSrc: sliderImage,
 		},
 		{
 			subtitle: "The Benefits of Space Solar",
@@ -35,7 +32,7 @@ export const FullWidthSlider = () => {
 				"Convene an international partnership for development of space based energy.",
 			copy: "The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources.",
 			buttonText: "Business Plan",
-			imageSrc: sliderImage3,
+			imageSrc: sliderImage,
 		},
 		{
 			subtitle: "The Benefits of Space Solar",
@@ -43,7 +40,7 @@ export const FullWidthSlider = () => {
 				"Convene an international partnership for development of space based energy.",
 			copy: "The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources.",
 			buttonText: "Business Plan",
-			imageSrc: sliderImage4,
+			imageSrc: sliderImage,
 		},
 		{
 			subtitle: "The Benefits of Space Solar",

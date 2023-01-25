@@ -32,26 +32,28 @@ export const Navigation = ({ links, mobile }) => {
     `}
 		>
 			{links &&
-				links.map((link) => {
+				links.map((link, index) => {
 					return (
-						<div>
-							<div key={link.name} className="c-navigation__item">
-								<a
-									onClick={() =>
-										link.subItems.length > 0 && mobile
-											? setSubMenuPaneActive(true)
-											: ""
-									}
-									className="c-navigation__link"
-								>
-									{link.name}
-								</a>
-								{link.subItems.length > 0 && mobile && (
-									<div className="c-navigation__arrow">
-										<Arrow />
-									</div>
-								)}
-							</div>
+						<div
+							key={link.name}
+							className={`c-navigation__item
+        ${index == links.length - 1 ? "c-navigation__item-last" : ""}`}
+						>
+							<a
+								onClick={() =>
+									link.subItems.length > 0 && mobile
+										? setSubMenuPaneActive(true)
+										: ""
+								}
+								className="c-navigation__link"
+							>
+								{link.name}
+							</a>
+							{link.subItems.length > 0 && mobile && (
+								<div className="c-navigation__arrow">
+									<Arrow />
+								</div>
+							)}
 						</div>
 					);
 				})}

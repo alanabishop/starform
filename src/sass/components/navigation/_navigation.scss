@@ -3,57 +3,61 @@
 \*------------------------------------*/
 
 .c-navigation {
-    display: none;
+	display: none;
 
-    @include bp('large') {
-        display: flex;
-        align-items: center;
-    }
+	@include bp("large") {
+		display: flex;
+		align-items: center;
+	}
 }
 
 .c-navigation__item {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
+	padding-right: 20px;
 
-    &:not(:last-of-type) {
+    @include bp(x-large) {
         padding-right: 30px;
     }
 }
 
+.c-navigation__item-last {
+	padding-right: 0;
+}
+
 .c-navigation__link {
-    position: relative;
-    transition: $transition;
-    cursor: pointer;
-    z-index: 3000;
+	position: relative;
+	transition: $transition;
+	cursor: pointer;
+	z-index: 3000;
 
-    &::after {
-        position: absolute;
-        content: '';
-        display: block;
+	&::after {
+		position: absolute;
+		content: "";
+		display: block;
 
-        height: 1px;
-        width: 100%;
-        background-color: $color--gold;
+		height: 1px;
+		width: 100%;
+		background-color: $color--gold;
 
-        transition: $transition;
-        transform-origin: left;
-        transform: scaleX(0);
-    }
+		transition: $transition;
+		transform-origin: left;
+		transform: scaleX(0);
+	}
 
-    &:hover {
-        color: $color--gold;
+	&:hover {
+		color: $color--gold;
 
-        &::after {
-            transform: scaleX(1);
-        }
-
-    }
+		&::after {
+			transform: scaleX(1);
+		}
+	}
 }
 
 .c-navigation__arrow {
-    padding-left: 10px;
+	padding-left: 10px;
 
-    &:has(+ .c-navigation__link:hover) {
-        transform: translateX(100%);
-    }
+	&:has(+ .c-navigation__link:hover) {
+		transform: translateX(100%);
+	}
 }

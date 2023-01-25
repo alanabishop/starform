@@ -10,6 +10,8 @@ export const AnimatedCircles = () => {
 		ref.current.classList.add('is-active')
 	}
 
+	// el.addEventListener("animationend", function() {}, false);
+
 	return (
 		<div className="c-animated-circles " ref={ref}>
 			<svg width="100%" height="100%" viewBox="0 0 347 476" fill="none">
