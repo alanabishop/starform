@@ -33,6 +33,16 @@
 			transform: rotate(-45deg);
 		}
 	}
+
+	&:hover {
+		.c-menu-toggle__bottom {
+			background-color: $color--gold;
+		}
+
+		.c-menu-toggle__middle {
+			background-color: $color--gold;
+		}
+	}
 }
 
 .c-menu-toggle__icon {
@@ -48,11 +58,6 @@
 	left: 0;
 
 	margin: auto;
-
-	transition: {
-		duration: 0.25s;
-		delay: 0s;
-	}
 }
 
 .c-menu-toggle__line {
@@ -65,7 +70,7 @@
 
 	background-color: $color--white;
 
-	transition: 0.2s ease-in-out;
+	transition: $transition;
 }
 
 .c-menu-toggle__top {
@@ -78,7 +83,6 @@
 	top: 0px;
 
 	transition: {
-		property: opacity;
 		duration: 0.25s;
 		delay: 0s;
 	}

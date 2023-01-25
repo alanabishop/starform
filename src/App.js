@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 
 //Utils
 import { Grid } from "./utils/Grid";
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
 	return (
@@ -56,6 +57,7 @@ function App() {
 				}
 				buttonText={"Contact us"}
 			/>
+			<CookieBanner />
 			<Footer />
 		</div>
 	);

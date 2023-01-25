@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+//Components
 import Logo from "./Logo";
 import MobilePane from "./MobilePane";
 import MenuToggle from "./MenuToggle";
@@ -37,10 +38,6 @@ export const Header = () => {
 	const toggle = () => setMobilePaneActive(!mobilePaneActive);
 
 	useEffect(() => {
-		document.body.classList.toggle("mobile-pane-is-active", mobilePaneActive);
-	}, [mobilePaneActive]);
-
-	useEffect(() => {
 		const handleResize = () => setMobilePaneActive(false);
 		window.addEventListener("resize", handleResize);
 		return () => {
@@ -64,8 +61,7 @@ export const Header = () => {
 					<MenuToggle toggle={toggle} isOpen={mobilePaneActive} />
 				</div>
 			</div>
-
-			<MobilePane links={navigationLinks} />
+			<MobilePane mobilePaneActive={mobilePaneActive} links={navigationLinks} />
 		</header>
 	);
 };

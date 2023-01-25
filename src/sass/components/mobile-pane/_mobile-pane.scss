@@ -19,14 +19,6 @@
 
     z-index: 5000;
 
-	transition:$transition-slow;
-	transition-delay: 0.2s;
-
-    .mobile-pane-is-active & {
-        transform: translateX(0);
-        visibility: visible;
-		position: fixed;
-    }
 }
 
 .c-mobile-pane__navigation {

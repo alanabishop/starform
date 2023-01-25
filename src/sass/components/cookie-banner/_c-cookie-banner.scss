@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #COOKIE-BANNER
+\*------------------------------------*/
+
+.c-cookie-banner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 20px 14px 16px;
+	background-color: $color--grey;
+	z-index: 3000;
+
+	@include bp(medium) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		padding: 20px 30px 20px 24px;
+	}
+}
+
+.c-cookie-banner__text,
+.c-cookie-banner__link {
+	color: $color--black;
+	font-size: 12px;
+	line-height: 24px;
+
+	@include bp(medium) {
+		font-size: 14px;
+		line-height: 28px;
+	}
+}
+
+.c-cookie-banner__text {
+	padding-bottom: 17px;
+
+	@include bp(medium) {
+		padding-bottom: 0;
+	}
+}
+
+.c-cookie-banner__link {
+	padding-right: 72px;
+}
+
+.c-cookie-banner__ctas {
+	@include bp(medium) {
+		justify-content: flex-end;
+	}
+}

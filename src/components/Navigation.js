@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
 
 //Components
 import Arrow from "./Arrow";
@@ -18,12 +19,7 @@ export const Navigation = ({ links, mobile }) => {
 				}
 			});
 		}
-	}, [links]);
-
-	const handleSubMenu = () => {
-		document.body.classList.add("submenu-pane-is-active");
-		setSubMenuPaneActive(true)
-	}
+	}, []);
 
 	useEffect(() => {
 		setSubMenuItemTitle(subMenuItem.pop());
@@ -43,7 +39,7 @@ export const Navigation = ({ links, mobile }) => {
 								<a
 									onClick={() =>
 										link.subItems.length > 0 && mobile
-											? handleSubMenu()
+											? setSubMenuPaneActive(true)
 											: ""
 									}
 									className="c-navigation__link"
@@ -56,15 +52,15 @@ export const Navigation = ({ links, mobile }) => {
 									</div>
 								)}
 							</div>
-							{subMenuPaneActive && (
-								<SubmenuPane
-									subMenuPaneTitle={subMenuItemTitle}
-									links={subMenuItem}
-								/>
-							)}
 						</div>
 					);
 				})}
+			<SubmenuPane
+				setSubMenuPaneActive={setSubMenuPaneActive}
+				subMenuPaneActive={subMenuPaneActive}
+				subMenuPaneTitle={subMenuItemTitle}
+				links={subMenuItem}
+			/>
 		</div>
 	);
 };

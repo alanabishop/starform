@@ -15,6 +15,12 @@
     @include bp(medium) {
         padding: 24px 19px 30px;
     }
+
+    &:hover {
+        .c-card__subtitle {
+            color: $color--white;
+        }
+    }
 }
 
 .c-card__tag {
@@ -85,6 +91,8 @@
 .c-card__subtitle {
     padding-bottom: 30px;
     color: $color--offwhite;
+
+    transition: $transition;
 
     @include bp(medium){
         padding-bottom: 70px;

@@ -1,21 +1,55 @@
-import { useState } from "react";
+import { gsap } from "gsap";
+import { useRef, useEffect, useState } from "react";
 
 //Components
 import Arrow from "./Arrow";
 
-export const SubmenuPane = ({ subMenuPaneTitle, links }) => {
-	const [subMenuPaneActive, setSubMenuPaneActive] = useState(false);
+export const SubmenuPane = ({
+	setSubMenuPaneActive,
+	subMenuPaneActive,
+	subMenuPaneTitle,
+	links,
+}) => {
+	const submenuPaneEl = useRef();
 
-	const handleSubMenu = () => {
-		document.body.classList.remove("submenu-pane-is-active");
-		setSubMenuPaneActive(false)
+	let subMenuOpenTl = gsap.timeline({ paused: true });
+	let subMenuCloseTl = gsap.timeline({ paused: true });
+
+	if (submenuPaneEl?.current) {
+		subMenuOpenTl = subMenuOpenTl
+			.to(submenuPaneEl?.current, {
+				autoAlpha: 1,
+				ease: "Power2.easeInOut",
+				duration: 0.5,
+			})
+			.to(submenuPaneEl?.current, {
+				x: 0,
+				ease: "Power2.easeInOut",
+				duration: 0.5,
+			});
+
+		subMenuCloseTl = subMenuCloseTl
+			.to(submenuPaneEl?.current, {
+				x: "100%",
+				ease: "Power4.easeInOut",
+				duration: 0.5,
+			})
+			.to(submenuPaneEl?.current, {
+				autoAlpha: 0,
+				ease: "Power4.easeInOut",
+				duration: 0.5,
+			});
 	}
 
+	useEffect(() => {
+		subMenuPaneActive ? subMenuOpenTl.play() : subMenuCloseTl.play();
+	}, [subMenuPaneActive]);
+
 	return (
-		<div className="c-submenu-pane">
+		<div ref={submenuPaneEl} className="c-submenu-pane">
 			<div className="c-submenu-pane__navigation content-wrapper">
 				<div
-					onClick={handleSubMenu}
+					onClick={() => setSubMenuPaneActive(false)}
 					className="c-submenu-pane__navigation-item"
 				>
 					<div className="c-submenu-pane__navigation-arrow">
