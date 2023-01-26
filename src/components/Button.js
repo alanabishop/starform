@@ -25,7 +25,7 @@ export const Button = ({ children, onClick, squared, disabled }) => {
 
 	return (
 		<div
-			className={`c-btn
+			className={`c-btn load-in
         ${squared ? "c-btn--squared" : ""}
         ${disabled ? "c-btn--disabled" : ""}
         `}

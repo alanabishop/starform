@@ -1,3 +1,6 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 //Styles
 import "./sass/App.scss";
 
@@ -19,13 +22,43 @@ import Footer from "./components/Footer";
 //Utils
 import { Grid } from "./utils/Grid";
 import CookieBanner from "./components/CookieBanner";
+import { useEffect, useState } from "react";
 
 function App() {
+	const [splashScreenComplete, setSplashScreenComplete] = useState(false);
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	const loadInElsAnimate = (els) => {
+		els.forEach((el, i) => {
+			const anim = gsap.to(el, {
+				y: 0,
+				autoAlpha: 1,
+				ease: "Power1.EaseInOut",
+				delay: 0.1,
+				duration: 0.6,
+			});
+			ScrollTrigger.create({
+				trigger: el,
+				animation: anim,
+				toggleActions: "play none none none",
+				once: true,
+			});
+		});
+	};
+
+	useEffect(() => {
+		const loadInEls = gsap.utils.toArray(".load-in");
+		if (splashScreenComplete) {
+			loadInElsAnimate(loadInEls);
+		}
+	}, [splashScreenComplete]);
+
 	return (
 		<div className="App">
-			<Splash/>
+			<Splash setSplashScreenComplete={setSplashScreenComplete} />
 			<Header />
-			<Grid/>
+			<Grid />
 			<Hero
 				title={"Welcome to StarForm"}
 				subtitle={"Helping nations achieve "}

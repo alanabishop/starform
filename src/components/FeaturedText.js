@@ -6,14 +6,14 @@ export const FeaturedText = ({ subtitle, text, buttonText }) => (
 		<div className="d-flex content-wrapper c-featured-text__wrapper">
 			<div className="content-inner w-3-col">
 			{subtitle && (
-				<div className="c-featured-text__subtitle">
-					<h3 className="t-mono t-color-gold">{subtitle}</h3>
+				<div className="c-featured-text__subtitle load-in">
+					<h3 className="t-mono t-color-gold load-in">{subtitle}</h3>
 				</div>
 			)}
 			</div>
 
 			<div className="c-featured-text__content content-inner w-8-col">
-				{text && <div className="c-featured-text__copy">{text}</div>}
+				{text && <div className="c-featured-text__copy load-in">{text}</div>}
 				{buttonText && <Button>{buttonText}</Button>}
 			</div>
 		</div>

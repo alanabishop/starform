@@ -60,8 +60,8 @@ export const CardSlider = ({ title }) => {
 
 	return (
 		<div className="c-card-slider">
-			<h2 className="content-wrapper c-card-slider__title">{title}</h2>
-			<div className="c-card-slider__slider">
+			<h2 className="content-wrapper c-card-slider__title load-in">{title}</h2>
+			<div className="c-card-slider__slider load-in">
 				<Swiper
 					spaceBetween={screenWidth <= 600 ? 8 : 20}
 					slidesPerView={
@@ -94,7 +94,7 @@ export const CardSlider = ({ title }) => {
 				</Swiper>
 			</div>
 
-			<div className="c-card-slider__components content-wrapper">
+			<div className="c-card-slider__components content-wrapper load-in">
 				<div className="d-flex d-flex--align-center content-inner">
 					<div className="c-card-slider__prev c-btn c-btn--square">
 						<svg

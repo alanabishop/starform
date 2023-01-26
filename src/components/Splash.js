@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-export const Splash = () => {
+export const Splash = ({setSplashScreenComplete}) => {
 	const splashEl = useRef();
 	const circle1 = useRef();
 	const circle2 = useRef();
@@ -52,11 +52,16 @@ export const Splash = () => {
 			});
 	};
 
+	const splashOnComplete = () => {
+		setSplashScreenComplete(true)
+		document.body.classList.remove("body-stop-scroll")
+	}
+
 	useEffect(() => {
 		const splashTl = gsap.timeline({
 			onStart: () => document.body.classList.add("body-stop-scroll"),
 
-			onComplete: () => document.body.classList.remove("body-stop-scroll"),
+			onComplete: splashOnComplete
 		});
 		splashAnimation(splashTl);
 	}, [circle1]);

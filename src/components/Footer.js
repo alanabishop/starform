@@ -16,7 +16,7 @@ export const Footer = () => {
 
 	return (
 		<footer className="c-footer">
-			<div className="content-wrapper d-flex d-flex--align-flex-start">
+			<div className="content-wrapper d-flex d-flex--align-flex-start load-in">
 				<div className="c-footer__logo w-2-col content-inner">
 					<div className="c-footer__logo-container ">
 						<Logo />
@@ -77,7 +77,7 @@ export const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="c-footer__closure content-wrapper d-flex d-flex--justify-space-between d-flex--align-center">
+			<div className="c-footer__closure content-wrapper d-flex d-flex--justify-space-between d-flex--align-center load-in">
 				<p className="c-footer__closure__text content-inner">
 					© StarForm 2022 | All rights reserved.
 				</p>

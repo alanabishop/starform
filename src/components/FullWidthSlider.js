@@ -53,7 +53,7 @@ export const FullWidthSlider = () => {
 	];
 
 	return (
-		<div className="c-full-width-slider">
+		<div className="c-full-width-slider load-in">
 			<Swiper
 				slidesPerView={1}
 				modules={[Navigation, Pagination]}
