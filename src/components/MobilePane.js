@@ -38,7 +38,7 @@ export const MobilePane = ({ mobilePaneActive, links }) => {
 
 	useEffect(() => {
 		mobilePaneActive ? menuOpenTl.play() : menuCloseTl.play();
-		document.body.classList.toggle("has-active-mobile-pane", mobilePaneActive);
+		document.body.classList.toggle("body-stop-scroll", mobilePaneActive);
 	}, [mobilePaneActive]);
 
 	return (

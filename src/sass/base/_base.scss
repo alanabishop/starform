@@ -9,7 +9,7 @@ body {
     font-family: $primary-font;
     font-weight: $font-weight--reg;
 
-    &.has-active-mobile-pane {
+    &.body-stop-scroll {
         overflow: hidden;
       }
 }

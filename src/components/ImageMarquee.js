@@ -13,7 +13,7 @@ const ImageMarquee = () => {
 	const marqueeTween = useRef();
 
 	const duplicateMarqueeImages = () => {
-		while (marqueeImages.length < 12) {
+		while (marqueeImages.length < 20) {
 			marqueeImages = marqueeImages.concat(marqueeImages);
 		}
 	};

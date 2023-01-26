@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export const Splash = () => {
 	const splashEl = useRef();
@@ -52,8 +52,12 @@ export const Splash = () => {
 			});
 	};
 
-	useLayoutEffect(() => {
-		const splashTl = gsap.timeline();
+	useEffect(() => {
+		const splashTl = gsap.timeline({
+			onStart: () => document.body.classList.add("body-stop-scroll"),
+
+			onComplete: () => document.body.classList.remove("body-stop-scroll"),
+		});
 		splashAnimation(splashTl);
 	}, [circle1]);
 
