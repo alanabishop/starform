@@ -37,7 +37,8 @@ export const MobilePane = ({ mobilePaneActive, links }) => {
 	}
 
 	useEffect(() => {
-		mobilePaneActive ? menuOpenTl.play() : menuCloseTl.play();
+		mobilePaneActive ? menuOpenTl.play() : 	menuCloseTl.play();
+		document.body.classList.toggle("has-active-mobile-pane", mobilePaneActive);
 	}, [mobilePaneActive]);
 
 	return (
