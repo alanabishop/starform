@@ -5,6 +5,7 @@ import "./sass/App.scss";
 import ttiImage from "./assets/tti.jpg";
 
 //Components
+import Splash from "./components/Splash";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import FeaturedText from "./components/FeaturedText";
@@ -22,6 +23,7 @@ import CookieBanner from "./components/CookieBanner";
 function App() {
 	return (
 		<div className="App">
+			<Splash/>
 			<Header />
 			<Grid/>
 			<Hero

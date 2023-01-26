@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    #SPLASH
+\*------------------------------------*/
+
+.c-splash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: $color--darkBlue;
+	z-index: 10000;
+}
+
+.c-splash__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+	background: transparent;
+	border: solid 1px $color--gold;
+	border-radius: 100%;
+	animation: pulsing 2s infinite;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0;
+}
+
+@keyframes pulsing {
+	0% {
+		transform: translate(-50%, -50%) scale(0.6, 0.6);
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1.2, 1.2);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0.6, 0.6);
+	}
+}
+
+.c-splash__circle-1 {
+	width: 50px;
+	height: 50px;
+
+    @include bp(medium) {
+        width: 268px;
+        height: 268px;
+    }
+}
+
+.c-splash__circle-2 {
+	width: 80px;
+	height: 80px;
+    animation-delay: 0.2s;
+
+    @include bp(medium) {
+        width: 370px;
+        height: 370px;
+    }
+}
+
+.c-splash__circle-3 {
+	width: 120px;
+	height: 120px;
+    animation-delay: 0.4s;
+
+    @include bp(medium) {
+        width: 475px;
+        height: 475px;
+    }
+}
