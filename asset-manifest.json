@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/starform/static/css/main.4032a60e.css",
-    "main.js": "/starform/static/js/main.b4491d1a.js",
+    "main.css": "/starform/static/css/main.1dc9c10c.css",
+    "main.js": "/starform/static/js/main.b8509863.js",
     "static/media/hero.jpg": "/starform/static/media/hero.f334ccd2ade1adf3213e.jpg",
     "static/media/slider.jpg": "/starform/static/media/slider.79b368384b63e39dfae4.jpg",
     "static/media/cta.jpg": "/starform/static/media/cta.9ff1fc04b51acec55fb6.jpg",
@@ -13,11 +13,11 @@
     "static/media/cta-gradient.svg": "/starform/static/media/cta-gradient.7c05d22f1fa63d729ca8.svg",
     "static/media/card-gradient.svg": "/starform/static/media/card-gradient.4aa369c28804363da473.svg",
     "static/media/hero-gradient.svg": "/starform/static/media/hero-gradient.10614c5f9319f1534048.svg",
-    "main.4032a60e.css.map": "/starform/static/css/main.4032a60e.css.map",
-    "main.b4491d1a.js.map": "/starform/static/js/main.b4491d1a.js.map"
+    "main.1dc9c10c.css.map": "/starform/static/css/main.1dc9c10c.css.map",
+    "main.b8509863.js.map": "/starform/static/js/main.b8509863.js.map"
   },
   "entrypoints": [
-    "static/css/main.4032a60e.css",
-    "static/js/main.b4491d1a.js"
+    "static/css/main.1dc9c10c.css",
+    "static/js/main.b8509863.js"
   ]
 }
