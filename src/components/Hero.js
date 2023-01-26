@@ -1,5 +1,9 @@
 import { gsap } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+//Assets
+import heroImage from "../assets/hero.jpg";
 
 //Components
 import ScrollDown from "./ScrollDown";
@@ -17,8 +21,13 @@ export const Hero = ({ title, subtitle, featuredText }) => {
 
 	return (
 		<div className="c-hero">
-			<div className="c-hero__bg"></div>
-			<div className="c-hero__bg-image"></div>
+			<LazyLoadImage
+				className="c-hero__image"
+				height="100%"
+				src={heroImage}
+				width="100%"
+				effect="blur"
+			/>
 			<div className="c-hero__gradient"></div>
 			<div className="c-hero__content content-wrapper">
 				{title && <h1 className="c-hero__title">{title}</h1>}
