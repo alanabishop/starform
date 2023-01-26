@@ -20,7 +20,7 @@ export const SubmenuPane = ({
 			.to(submenuPaneEl?.current, {
 				autoAlpha: 1,
 				ease: "Power2.easeInOut",
-				duration: 0.5,
+				duration: 0.2,
 			})
 			.to(submenuPaneEl?.current, {
 				x: 0,
@@ -31,13 +31,13 @@ export const SubmenuPane = ({
 		subMenuCloseTl = subMenuCloseTl
 			.to(submenuPaneEl?.current, {
 				x: "100%",
-				ease: "Power4.easeInOut",
+				ease: "Power2.easeInOut",
 				duration: 0.5,
 			})
 			.to(submenuPaneEl?.current, {
 				autoAlpha: 0,
-				ease: "Power4.easeInOut",
-				duration: 0.5,
+				ease: "Power2.easeInOut",
+				duration: 0.2,
 			});
 	}
 

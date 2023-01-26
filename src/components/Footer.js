@@ -60,9 +60,9 @@ export const Footer = () => {
 							</div>
 						))}
 					</div>
-					<div class="c-footer__twitter-logo-wrapper">
+					<div className="c-footer__twitter-logo-wrapper">
 						<svg
-						class="c-footer__twitter-logo"
+						className="c-footer__twitter-logo"
 							width="24"
 							height="20"
 							viewBox="0 0 24 20"
