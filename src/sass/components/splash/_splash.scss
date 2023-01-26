@@ -43,8 +43,8 @@
 	height: 50px;
 
     @include bp(medium) {
-        width: 268px;
-        height: 268px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -54,8 +54,8 @@
     animation-delay: 0.2s;
 
     @include bp(medium) {
-        width: 370px;
-        height: 370px;
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -65,7 +65,7 @@
     animation-delay: 0.4s;
 
     @include bp(medium) {
-        width: 475px;
-        height: 475px;
+        width: 200px;
+        height: 200px;
     }
 }
