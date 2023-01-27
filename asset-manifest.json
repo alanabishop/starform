@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/starform/static/css/main.da706abc.css",
-    "main.js": "/starform/static/js/main.b8509863.js",
-    "static/media/hero.jpg": "/starform/static/media/hero.f334ccd2ade1adf3213e.jpg",
+    "main.js": "/starform/static/js/main.98d6ff3f.js",
     "static/media/slider.jpg": "/starform/static/media/slider.79b368384b63e39dfae4.jpg",
     "static/media/cta.jpg": "/starform/static/media/cta.9ff1fc04b51acec55fb6.jpg",
+    "static/media/hero.jpg": "/starform/static/media/hero.8af1f438b973d845bb60.jpg",
     "static/media/tti.jpg": "/starform/static/media/tti.5b23660872a6c03fa553.jpg",
     "static/media/card-slider-3.jpg": "/starform/static/media/card-slider-3.3ce56384687fbfdd1a2b.jpg",
     "static/media/card-slider-1.jpg": "/starform/static/media/card-slider-1.31031de368f4c478cfaa.jpg",
@@ -14,10 +14,10 @@
     "static/media/card-gradient.svg": "/starform/static/media/card-gradient.4aa369c28804363da473.svg",
     "static/media/hero-gradient.svg": "/starform/static/media/hero-gradient.10614c5f9319f1534048.svg",
     "main.da706abc.css.map": "/starform/static/css/main.da706abc.css.map",
-    "main.b8509863.js.map": "/starform/static/js/main.b8509863.js.map"
+    "main.98d6ff3f.js.map": "/starform/static/js/main.98d6ff3f.js.map"
   },
   "entrypoints": [
     "static/css/main.da706abc.css",
-    "static/js/main.b8509863.js"
+    "static/js/main.98d6ff3f.js"
   ]
 }
